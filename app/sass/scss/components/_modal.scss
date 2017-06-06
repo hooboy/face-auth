@@ -1,0 +1,193 @@
+/*------------------------------------*\
+    Modal
+\*------------------------------------*/
+
+.y-modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    @include opacity(0.5);
+    background-color: #000;
+    zoom:1;
+    display: none;
+}
+
+.y-modal {
+    width: 90%;
+    min-width: 300px;
+    max-height: 80%;
+    overflow-y: auto;
+    margin: 10px auto;
+    border: 1px solid #666;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    right: auto;
+    z-index: -1;
+    background-color: #fff;
+    display: none\9;
+    opacity: 0;
+    outline: 0;
+    @include border-radius(3px);
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+    @include transform(translate(-50%, 0));
+
+    .y-modal-header, .y-modal-footer {
+        padding-top: 26px;
+    }
+
+    .y-modal-title {
+        margin: 0 10px;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 15px 0;
+        color: #000;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .y-modal-container {
+        padding: 20px;
+    }
+
+    .y-modal-buttons {
+        text-align: center;
+
+        .m-box {
+            width: 100%;
+            @include box;
+
+            .m-flex {
+                height: rem-calc(80px);
+                @include box-flex(1);
+                @include box-sizing(border-box);
+
+                &:nth-child(1) {
+                    padding-right: 5px;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+            height: 100%;
+            display: block;
+            font-size: rem-calc(30px);
+            font-weight: 700;
+            line-height: rem-calc(80px);
+            text-align: center;
+
+            &.btn-light {
+                color: #fff;
+                background-color: #2aad6f;
+            }
+
+            &.btn-buy {
+                color: #00925f;
+                background-color: #d4eee1;
+            }
+
+            &.btn-now {
+                color: #fff;
+                background-color: #fb5e5e;
+            }
+
+            &.btn-default {
+                color: #00925f;
+                background-color: #d4eee1;
+            }
+        }
+    }
+
+    .y-modal-content {
+        padding-bottom: 30px;
+    }
+
+    .y-modal-wrap {
+        padding: 0 30px;
+    }
+
+    .y-modal-message {
+        padding: 0 30px 12px;
+        color: #585858;
+        font-size: 18px;
+        line-height: 28px;
+
+        a {
+            color: #00925f;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .y-modal-tip {
+        color: #969696;
+        font-size: 14px;
+    }
+
+    .y-modal-close {
+        overflow: hidden;
+        zoom: 1;
+        padding: 6px;
+
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+
+        .close {
+            width: 30px;
+            height: 30px;
+            display: block;
+            overflow: hidden;
+            color: #999;
+            line-height: 30px;
+            font-size: 25px;
+            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    &.y-modal-service {
+        width: 40%;
+
+        .y-modal-service-title {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .y-modal-header {
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .y-modal-content {
+            max-height: 400px;
+            overflow-y: scroll;
+            p {
+                font-size: rem-calc(26px);
+            }
+            h4 {
+                font-size: rem-calc(30px);
+            }
+        }
+    }
+}
+
+.is-modal-active, .y-modal-active {
+    display: block\9!important;
+    opacity: 1!important;
+    z-index: 10010!important;
+}

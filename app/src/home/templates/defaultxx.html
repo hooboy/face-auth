@@ -1,0 +1,101 @@
+<div>
+	<div class="baseXXblock">
+			<ul>
+				<li>
+					<div class="tt">姓名：</div>
+					<div class="xx">{{personxx.userName}}</div>
+				</li>
+				<li>
+					<div class="tt">工作单位：</div>
+					<div class="xx">{{personxx.factoryName}}</div>
+				</li>
+				<li>
+					<div class="tt">身份证号：</div>
+					<div class="xx">{{personxx.ident}}</div>
+				</li>
+				<li>
+					<div class="tt">手机号码：</div>
+					<div class="xx">{{personxx.mobile}}</div>
+				</li>
+			</ul>
+		</div>
+		<div class="huiTT">
+			基本信息
+		</div>
+		<form name="defaultxxform">
+			<div class="lineTLfa">
+				<div class="lineTL">
+					<div class="left">所在部门</div>
+					<div class="center">
+						<input ng-model="defObj.department" ng-class='{"errorSty":deparBool}' required="true" placeholder="请输入您所在部门" ng-blur="deparfn()" />
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">入职时间</div>
+					<div class="center">
+						<input ng-model="defObj.entryTime" ng-class='{"errorSty":entryBool}' ng-change="entryTimefn()" required="true" type="date" placeholder="请输入您的入职时间" ng-blur="entryfn()" />
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">教育程度</div>
+					<div class="center">
+						<input ng-model="defObj.education" ng-class='{"errorSty":educaBool}' required="true" placeholder="请输入您的教育程度" ng-blur="educafn()">
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">开户银行</div>
+					<div class="center">
+						<select ng-model="defObj.bankName" ng-class='{"errorSty":bankNaBool}' ng-change="changeSty()" required="true" class="bankNamecls baseclr" ng-options="ls.regValue as ls.regValue for ls in bankNamels">
+							<option value="">请选择</option>
+						</select>
+					</div>
+					<div class="right">
+						<img src="../../images/rightArrow.png">
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">银行卡号</div>
+					<div class="center">
+						<input ng-model="defObj.bankNo" ng-class='{"errorSty":bankNoBool}' type="number" required="true" ng-pattern="/\d{16,19}/" placeholder="请输入本人银行卡号" ng-blur="bankNofn()">
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">个人月收入</div>
+					<div class="center">
+						<input ng-model="defObj.wkIncome" ng-class='{"errorSty":wkIncoBool}' type="number" ng-parttern="/^[^-+]\d{1,}/" required="true" placeholder="请输入个人月收入" ng-blur="wkInfn()">
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">QQ号码</div>
+					<div class="center">
+						<input ng-model="defObj.qq" ng-class='{"errorSty":qqBool}' type="number" ng-pattern="/^[1-9]\d{4,10}$/" required="true" placeholder="请输入本人QQ号码" ng-blur="qqfn()">
+					</div>
+					<div class="right">
+						<!--<img src="images/rightArrow.png">-->
+					</div>
+				</div>
+				<div class="lineTL">
+					<div class="left">芝麻信用授权</div>
+					<div class="right2">
+						<label><input ng-model="defObj.zhima" style="vertical-align: middle;appearance: none;-webkit-appearance:none;border-color:#eee;" class="mui-switch mui-switch-anim" type="checkbox"></label>
+					</div>
+				</div>
+			</div>
+		</form>
+		<a class="buttonsty basebgclr marTbut marBbut" ng-click="gonext()">下一步</a>
+</div>

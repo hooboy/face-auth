@@ -1,0 +1,156 @@
+<div>
+	<div class="huiTT">
+			居住地址
+		</div>
+		<div class="lineTLfa">
+			<div class="lineTL">
+				<div class="left">所在省份</div>
+				<div class="center">
+					<select class="baseclr provincesty" ng-class="{'errorSty':provinsty}" required="required" ng-model="address.province" ng-options="key as key for (key,value) in division" ng-change="changeClr()">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">所在城市</div>
+				<div class="center">
+					<select class="baseclr citysty" ng-class="{'errorSty':ctsty}" required="required" ng-model="address.city" ng-options="key as key for (key,value) in division[address.province]" ng-change="changeClr2()">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">所在区县</div>
+				<div class="center">
+					<select class="baseclr districtsty" ng-class="{'errorSty':distrsty}" required="required" ng-model="address.district" ng-options="value as value for value in division[address.province][address.city]" ng-change="changeClr3()">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">详细地址</div>
+				<div class="center">
+					<input required="required" ng-class="{'errorSty':detailsty}" ng-model="address.detail" placeholder="请输入详细地址" ng-blur="detafn()">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+		</div>
+		
+		<div class="huiTT">
+			配偶（家庭）联系人
+		</div>
+		<div class="lineTLfa">
+			<div class="lineTL">
+				<div class="left">姓名</div>
+				<div class="center">
+					<input ng-model="homeContact.name"  ng-class="{'errorSty':faminamesty}" required="required" placeholder="请输联系人姓名" ng-blur="homenamefn()">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">关系</div>
+				<div class="center">
+					<select class="baseclr familysty" ng-class="{'errorSty':famirelasty}" ng-change="relastyfn()" ng-model="homeContact.relationship" ng-options="relals.regValue as relals.regValue for relals in relativer" required="required">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">手机号码</div>
+				<div class="center">
+					<input ng-model="homeContact.phone" ng-class="{'errorSty':famiphonesty}" required="required" placeholder="请输入联系人手机号码" ng-blur="homephonefn()">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+		</div>
+		
+		<div class="huiTT">
+			紧急联系人
+		</div>
+		<div class="lineTLfa">
+			<div class="lineTL">
+				<div class="left">姓名</div>
+				<div class="center">
+					<input ng-model="urgentContact.name"  ng-class="{'errorSty':urgenamesty}" required="required" placeholder="请输联系人姓名" ng-blur="urgenamefn()">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">关系</div>
+				<div class="center">
+					<select class="baseclr urgensty" ng-class="{'errorSty':urgerelasty}" ng-change="relastyfn2()" ng-model="urgentContact.relationship" ng-options="otherls.regValue as otherls.regValue for otherls in others" required="required">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">手机号码</div>
+				<div class="center">
+					<input type="tel" ng-class="{'errorSty':urgephonesty}" ng-model="urgentContact.phone"  required="required" placeholder="请输入联系人手机号码" ng-blur="urgephonefn()">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+		</div>
+		
+		<div class="huiTT">
+			其他联系人
+		</div>
+		<div class="lineTLfa">
+			<div class="lineTL">
+				<div class="left">姓名</div>
+				<div class="center">
+					<input ng-class="{'errorSty':othenamesty}" ng-model="otherContact.name" placeholder="请输联系人姓名">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">关系</div>
+				<div class="center">
+					<select class="baseclr othersty" ng-class="{'errorSty':otherelasty}" ng-change="relastyfn3()" ng-model="otherContact.relationship" ng-options="otherls.regValue as otherls.regValue for otherls in others">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="right">
+					<img src="../../images/rightArrow.png">
+				</div>
+			</div>
+			<div class="lineTL">
+				<div class="left">手机号码</div>
+				<div class="center">
+					<input type="tel" ng-class="{'errorSty':othephonesty}" ng-model="otherContact.phone" placeholder="请输入联系人手机号码">
+				</div>
+				<div class="right">
+					<!--<img src="../../images/rightArrow.png">-->
+				</div>
+			</div>
+		</div>
+		
+		<a class="buttonsty basebgclr marTbut marBbut" ng-click="nextgo()">下一步</a>
+</div>

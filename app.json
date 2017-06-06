@@ -1,0 +1,30 @@
+{
+    "subscribe": 1,
+    "customer": {
+        "nowDate": "20170309174014",
+        "isNewPerson": "0",
+        "unionid": "ox-vTw6TGYrDm-RZpGJpwfLwfYlE",
+        "openid": "odftbw1zW7rX8PthyMcl3pYvCRhM",
+        "ident": "360321199401305018",
+        "mobile": "18919197740",
+        "isSetpwd": "1",
+        "token": "08769f4e9b3e0842d40d002a37d99e9b",
+        "payType": "wx",
+        "name": "欧阳山",
+        "nickname": "率性的萝卜",
+        "questionNum": "0",
+        "personid": "10003013",
+        "coordinate": {
+            "latitude": "0",
+            "longitude": "0"
+        }
+    },
+    "config": {
+        "debug": false,
+        "appId": "wx875c67a4fc574d93",
+        "timestamp": 1489232513,
+        "nonceStr": "b23323ae-19a9-4406-b3ed-6a25c55ede82",
+        "signature": "8a3df61d5aa0137d4a1aaac40f6b4e8a460b2a3b",
+        "jsApiList": null
+    }
+}

@@ -1,0 +1,79 @@
+<div class="huiTT">
+    身份证图片
+</div>
+<div class="photok">
+    <div class="blktt">身份证图片<span class="baseclr">(必选)</span><a href="javascript:;" ng-click="vm.openOverlay()"><img src="../../images/ask.png"></a></div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.data.identFront"></uploader>
+        </div>
+        <div class="wen">身份证正面照片</div>
+    </div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.data.identBack"></uploader>
+        </div>
+        <div class="wen">身份证反面照片</div>
+    </div>
+</div>
+
+
+<div class="huiTT">
+    工作证明文件 或 第二证明文件 <span class="baseclr">(至少选择一种)</span>
+</div>
+<div class="photok">
+    <div class="blktt">工作证明文件 <a href="javascript:;" ng-click="vm.openOverlay()"><img src="../../images/ask.png"></a></div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.proves[0]"></uploader>
+        </div>
+        <div class="wen">工牌正面照</div>
+    </div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.proves[1]"></uploader>
+        </div>
+        <div class="wen">工牌反面照</div>
+    </div>
+    <div class="blkttLimit"></div>
+    <div class="blktt">第二证明文件 <a href="javascript:;" ng-click="vm.openOverlay()"><img src="../../images/ask.png"></a></div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.prove"></uploader>
+        </div>
+        <div class="wen">社保缴纳记录截图</div>
+    </div>
+</div>
+
+
+<div class="huiTT">
+    其他证明文件 <span class="baseclr">(选填)</span>
+</div>
+<div class="photok" id="identity-other">
+    <div class="blktt">其他证明文件 <a href="javascript:;" ng-click="vm.openOverlay()"><img src="../../images/ask.png"></a></div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.proof[0]"></uploader>
+        </div>
+        <div class="wen">社保正面图片</div>
+    </div>
+    <div class="showPhoto">
+        <div class="photos">
+            <uploader ng-model="vm.proof[1]"></uploader>
+        </div>
+        <div class="wen">社保反面图片</div>
+    </div>
+</div>
+
+<div class="takephotoTK" id="tips-overlay" style="display: none;">
+    <div class="cont">
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+        <p class="baseclr">1. 哈哈哈哈哈哈</p>
+    </div>
+</div>
+
+<a class="buttonsty basebgclr marTbut marBbut" ng-click="vm.uploadChange()" href="javascript:;">提交</a>
